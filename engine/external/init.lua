@@ -4,5 +4,18 @@ if not path:find("init") then
   mlib = require(path .. ".mlib")
   -- if not web then clipper = require(path .. ".clipper") end
   ripple = require(path .. ".ripple")
-  steam = require 'luasteam'
+  
+  --require 'luasteam'
+  steam = {
+	init = function() end,
+	userStats = {
+		requestCurrentStats = function() end
+	},
+	friends = {
+		setRichPresence = function(...) end
+	},
+	runCallbacks = function() end,
+	shutdown = function() end
+  }
+  
 end
